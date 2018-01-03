@@ -7,7 +7,7 @@ import SearchBar from './components/search_bar';
 import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list.js';
 
-const youtube_api = process.env.REACT_APP_.YOUTUBE_API || process.env.API;
+const youtube_api = process.env.REACT_APP_API;
 // Create a new component. This component should produce 
 // some html 
 
