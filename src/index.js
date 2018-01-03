@@ -9,6 +9,7 @@ import VideoList from './components/video_list.js';
 
 
 const API_KEY = process.env.youtube_api;
+console.log(API_KEY);
 
 // Create a new component. This component should produce 
 // some html 
