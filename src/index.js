@@ -8,7 +8,7 @@ import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list.js';
 
 
-var API_KEY = process.env.YOUTUBEAPI;
+const API_KEY = process.env.YOUTUBEAPI;
 
 // Create a new component. This component should produce 
 // some html 
@@ -30,10 +30,6 @@ class App extends Component {
         this.videoSearch('Learn react');
     }
 
-    if(API_key === undefined){
-        <div>"Loading..</div>
-    }
-    else(
     videoSearch(term) {
         YTSearch({ key: API_KEY, term: term }, (videos) => {
             this.setState({
@@ -44,7 +40,6 @@ class App extends Component {
             //this.setState({videos:videos});
         });
     }
-)
 
     render() {
         const videoSearchThrottle = Lodash.debounce((term)=>{this.videoSearch(term);},100);
