@@ -7,7 +7,7 @@ import SearchBar from './components/search_bar';
 import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list.js';
 
-const youtube_api = process.env.youtube_api;
+const youtube_api = '***REMOVED***';
 // Create a new component. This component should produce 
 // some html 
 
@@ -17,6 +17,7 @@ const youtube_api = process.env.youtube_api;
 // old syntax: const App = function(){}
 
 class App extends Component {
+
     constructor(props) {
         super(props);
 
@@ -25,9 +26,7 @@ class App extends Component {
             selectedVideo: null
         };
 
-        if (youtube_api !== undefined) {
-            this.videoSearch('Learn react');
-        }
+        this.videoSearch('Learn react');
     }
     videoSearch(term) {
         YTSearch({ key: youtube_api, term: term }, (videos) => {
