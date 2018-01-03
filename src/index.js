@@ -27,9 +27,10 @@ class App extends Component {
             selectedVideo: null
         };
 
-        this.videoSearch('Learn react');
+        if (youtube_api != undefined) {
+            this.videoSearch('Learn react');
+        }
     }
-
     videoSearch(term) {
         YTSearch({ key: youtube_api, term: term }, (videos) => {
             this.setState({
@@ -42,12 +43,12 @@ class App extends Component {
     }
 
     render() {
-        const videoSearchThrottle = Lodash.debounce((term)=>{this.videoSearch(term);},100);
+        const videoSearchThrottle = Lodash.debounce((term) => { this.videoSearch(term); }, 100);
 
 
         return (
             <div>
-                <Title title = "Youtube Video Player" />
+                <Title title="Youtube Video Player" />
                 <SearchBar onSearchTermChange={videoSearchThrottle} />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
