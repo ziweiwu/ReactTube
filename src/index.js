@@ -8,8 +8,7 @@ import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list.js';
 
 
-const API_KEY = process.env.youtube_api;
-console.log(API_KEY);
+//const youtube_api = process.env.youtube_api;
 
 // Create a new component. This component should produce 
 // some html 
@@ -32,7 +31,7 @@ class App extends Component {
     }
 
     videoSearch(term) {
-        YTSearch({ key: API_KEY, term: term }, (videos) => {
+        YTSearch({ key: youtube_api, term: term }, (videos) => {
             this.setState({
                 videos: videos,
                 selectedVideo: videos[0]
