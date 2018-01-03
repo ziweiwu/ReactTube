@@ -27,7 +27,7 @@ class App extends Component {
             selectedVideo: null
         };
 
-        if (youtube_api != undefined) {
+        if (youtube_api !== undefined) {
             this.videoSearch('Learn react');
         }
     }
