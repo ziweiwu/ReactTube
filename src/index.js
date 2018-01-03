@@ -7,7 +7,15 @@ import SearchBar from './components/search_bar';
 import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list.js';
 
+//disable analytic for deployment for faster site
+if (process.env.NODE_ENV !== 'production') {
+  analytics.disable();
+}
+
+//API key is access through special react app prefix REACT_APP 
+//Regular process.env.API will not work for create react app
 const youtube_api = process.env.REACT_APP_API;
+
 // Create a new component. This component should produce 
 // some html 
 
