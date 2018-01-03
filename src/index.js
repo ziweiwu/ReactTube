@@ -8,7 +8,7 @@ import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list.js';
 
 
-//const youtube_api = process.env.youtube_api;
+const youtube_api = process.env.youtube_api;
 
 // Create a new component. This component should produce 
 // some html 
