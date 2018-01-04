@@ -15,17 +15,13 @@ const VideoDetail = ({ video }) => {
                 <iframe className="embed-responsive-item" 
                     src={url} 
                     title="youtube player"
-                    allowFullscreen="allowfullscreen"
-                    mozallowFullscreen="mozallowfullscreen" 
-                    msallowFullscreen="msallowfullscreen" 
-                    oallowFullscreen="oallowfullscreen" 
-                    webkitallowFullscreen="webkitallowfullscreen"
+                    allowFullScreen="allowfullscreen"
                     frameBorder="0"
                 />
             </div>
-            <div className="details">
-                <div>{video.snippet.title}</div>
-                <div>{video.snippet.description}</div>
+            <div className="details" >
+                <div className = "video_title">{video.snippet.title}</div>
+                <div className = "video_info">{video.snippet.description}</div>
             </div>
         </div>
     );
