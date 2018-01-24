@@ -51,7 +51,7 @@ class App extends Component {
 
         return (
             <div>
-                <Title title="Youtube Video Player" />
+                <Title title="ReactTube" />
                 <SearchBar onSearchTermChange={videoSearchThrottle} />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
